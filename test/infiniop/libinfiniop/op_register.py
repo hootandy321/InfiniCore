@@ -489,3 +489,39 @@ def conv_(lib):
     lib.infiniopDestroyConvDescriptor.argtypes = [
         infiniopOperatorDescriptor_t,
     ]
+
+
+@OpRegister.operator
+def linear_(lib):
+    lib.infiniopCreateLinearDescriptor.restype = c_int32
+    lib.infiniopCreateLinearDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+    ]
+
+    lib.infiniopGetLinearWorkspaceSize.restype = c_int32
+    lib.infiniopGetLinearWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]
+
+    lib.infiniopLinear.restype = c_int32
+    lib.infiniopLinear.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+
+    lib.infiniopDestroyLinearDescriptor.restype = c_int32
+    lib.infiniopDestroyLinearDescriptor.argtypes = [
+        infiniopOperatorDescriptor_t,
+    ]
