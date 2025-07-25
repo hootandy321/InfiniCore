@@ -525,3 +525,43 @@ def linear_(lib):
     lib.infiniopDestroyLinearDescriptor.argtypes = [
         infiniopOperatorDescriptor_t,
     ]
+
+
+@OpRegister.operator
+def linear_backwards_(lib):
+    lib.infiniopCreateLinearBackwardsDescriptor.restype = c_int32
+    lib.infiniopCreateLinearBackwardsDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+    ]
+
+    lib.infiniopGetLinearBackwardsWorkspaceSize.restype = c_int32
+    lib.infiniopGetLinearBackwardsWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]
+
+    lib.infiniopLinearBackwards.restype = c_int32
+    lib.infiniopLinearBackwards.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+
+    lib.infiniopDestroyLinearBackwardsDescriptor.restype = c_int32
+    lib.infiniopDestroyLinearBackwardsDescriptor.argtypes = [
+        infiniopOperatorDescriptor_t,
+    ]
