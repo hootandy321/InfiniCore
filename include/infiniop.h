@@ -8,6 +8,8 @@
 #include "infiniop/ops/clip.h"
 #include "infiniop/ops/conv.h"
 #include "infiniop/ops/gemm.h"
+#include "infiniop/ops/linear.h"
+#include "infiniop/ops/linear_backwards.h"
 #include "infiniop/ops/mul.h"
 #include "infiniop/ops/random_sample.h"
 #include "infiniop/ops/rearrange.h"
