@@ -26,6 +26,26 @@ InfiniCore 是一个跨平台统一编程工具集，为不同芯片平台的功
 
 API 定义以及使用方式详见 [`InfiniCore文档`](https://github.com/InfiniTensor/InfiniCore-Documentation)。
 
+## 📚 完整开发文档 / Complete Documentation
+
+**[English Documentation](docs/README.md)** - Comprehensive developer documentation
+
+### 文档目录 / Documentation Index
+- **[项目架构 / Architecture](docs/architecture.md)** - 系统设计与模块概述 / System design and module overview
+- **[开发环境搭建 / Setup Guide](docs/setup.md)** - 构建与安装指南 / Build and installation guide  
+- **[算子开发 / Operator Development](docs/operators.md)** - 自定义算子开发教程 / Custom operator development tutorial
+- **[大模型适配 / Model Adaptation](docs/models.md)** - 大语言模型集成指南 (如Qwen3) / Large model integration guide (e.g., Qwen3)
+- **[性能优化 / Performance](docs/performance.md)** - 跨平台性能优化技术 / Cross-platform performance optimization
+- **[API参考 / API Reference](docs/api/README.md)** - 完整API文档 / Complete API documentation
+- **[示例代码 / Examples](docs/examples/README.md)** - 实用代码示例 / Practical code examples
+- **[故障排除 / Troubleshooting](docs/troubleshooting.md)** - 常见问题解决方案 / Common issues and solutions
+
+### 快速开始 / Quick Start
+1. **环境搭建** / **Setup**: 按照 [setup guide](docs/setup.md) 配置开发环境
+2. **第一个算子** / **First Operator**: 学习 [operator development](docs/operators.md) 创建自定义算子  
+3. **模型集成** / **Model Integration**: 使用 [model guide](docs/models.md) 适配大语言模型
+4. **性能调优** / **Performance Tuning**: 参考 [performance guide](docs/performance.md) 优化性能
+
 ## 配置和使用
 
 ### 一键安装
